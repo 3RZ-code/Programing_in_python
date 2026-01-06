@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Hi there is all dataset</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Gender</th>
+            <th>Age</th>
+            <th>Estimated Salary</th>
+            <th>Purchased</th>
+            <th>Action</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row.id }}</td>
+            <td>{{ row.Gender }}</td>
+            <td>{{ row.Age }}</td>
+            <td>{{ row.EstimatedSalary }}</td>
+            <td>{{ row.Purchased }}</td>
+            <td><a href="{{ url_for('delete', record_id=row.id) }}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

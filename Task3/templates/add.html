@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <h1>Add New Entry</h1>
+    <form method="post">
+        <table>
+            <tr>
+                <td>
+                <label for="gender">gender<br><input name="gender" type="text"></label>
+                </td>
+                <td>
+                <label for="age">age<br><input name="age" type="text"></label>
+                </td>
+                <td>
+                <label for="estimated_salary">estimated_salary<br><input name="estimated_salary" type="text"></label>
+                </td>
+                <td>
+                <label for="purchased">purchased<br><input name="purchased" type="text"></label>
+                </td>
+                <td>
+                <input type="submit">
+                </td>
+            </tr>
+        </table>
+    </form>
+{% endblock %}
